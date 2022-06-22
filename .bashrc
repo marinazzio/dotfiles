@@ -116,3 +116,7 @@ if ! shopt -oq posix; then
   fi
 fi
 alias dtf='/usr/bin/git --git-dir=/home/marinad/.dotfiles/ --work-tree=/home/marinad'
+
+. $HOME/.asdf/asdf.sh
+. $HOME/.asdf/completions/asdf.bash
+
