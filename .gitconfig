@@ -7,5 +7,5 @@
 	ci = commit
 
 	co = checkout
-	nb = checkout -b
+	nb = checkout -B
 
