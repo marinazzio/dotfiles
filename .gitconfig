@@ -9,3 +9,5 @@
 	co = checkout
 	nb = checkout -B
 
+[core]
+	autocrlf = true
