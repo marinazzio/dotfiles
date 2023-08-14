@@ -8,4 +8,5 @@
 
 	co = checkout
 	nb = checkout -B
+	rb = branch -D
 
