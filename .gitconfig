@@ -9,4 +9,7 @@
 	co = checkout
 	nb = checkout -B
 	rb = branch -D
-
+[pager]
+	branch = false
+[init]
+	defaultBranch = master
