@@ -105,6 +105,5 @@ alias dtf='/usr/bin/git --git-dir=/home/marinad/.dotfiles/ --work-tree=/home/mar
 . $HOME/.asdf/asdf.sh
 . $HOME/.asdf/completions/asdf.bash
 
-export DOCKER_HOST=tcp://127.0.0.1:2375
 export PATH="$HOME/.jenv/bin:$HOME/.maven/bin:$PATH"
 eval "$(jenv init -)"
