@@ -8,8 +8,13 @@
 
 	co = checkout
 	nb = checkout -B
+
+	rl = branch -l
 	rb = branch -D
 [pager]
 	branch = false
 [init]
 	defaultBranch = master
+[core]
+	pager = less -FX
+	autocrlf = input

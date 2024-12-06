@@ -107,3 +107,7 @@ alias dtf='/usr/bin/git --git-dir=/home/marinad/.dotfiles/ --work-tree=/home/mar
 
 export PATH="$HOME/.jenv/bin:$HOME/.maven/bin:$PATH"
 eval "$(jenv init -)"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH=$(python -m site --user-base)/bin:$PATH
