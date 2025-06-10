@@ -1,6 +1,28 @@
 [user]
-	name = Denis Kiselev
 	email = denis.kiselyov@gmail.com
+	name = Denis Kiselyov
+[diff]
+	tool = vsdiffmerge
+[difftool]
+	prompt = true
+[difftool "vsdiffmerge"]
+	cmd = \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsdiffmerge.exe\" \"$LOCAL\" \"$REMOTE\" //t
+	keepBackup = false
+[merge]
+	tool = vsdiffmerge
+[mergetool]
+	prompt = true
+[mergetool "vsdiffmerge"]
+	cmd = \"C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\Common7\\IDE\\CommonExtensions\\Microsoft\\TeamFoundation\\Team Explorer\\vsdiffmerge.exe\" \"$REMOTE\" \"$LOCAL\" \"$BASE\" \"$MERGED\" //m
+	keepBackup = false
+	trustExitCode = true
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
+[core]
+	autocrlf = input
 [alias]
 	c = commit -m
 	ca = commit -am
@@ -8,13 +30,6 @@
 
 	co = checkout
 	nb = checkout -B
-
-	lb = branch -l
 	rb = branch -D
 [pager]
 	branch = false
-[init]
-	defaultBranch = master
-[core]
-	pager = less -FX
-	autocrlf = input
