@@ -10,7 +10,10 @@ This repository uses **separate branches** for different OS environments:
 ## Before cloning to a new system
 
 ```powershell
-Set-Alias dtf "git --git-dir=$HOME\.dotfiles --work-tree=$HOME"
+function dtf {
+    git --git-dir=$HOME\.dotfiles --work-tree=$HOME @args
+}
+
 echo ".dotfiles" >> $HOME\.gitignore
 git clone --bare --branch windows git@github.com:marinazzio/dotfiles.git $HOME\.dotfiles
 dtf checkout
