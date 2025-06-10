@@ -16,7 +16,7 @@ function dtf {
 
 echo ".dotfiles" >> $HOME\.gitignore
 git clone --bare --branch windows git@github.com:marinazzio/dotfiles.git $HOME\.dotfiles
-dtf checkout
+dtf checkout windows
 dtf config --local status.showUntrackedFiles no
 ```
 
