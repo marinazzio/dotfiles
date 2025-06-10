@@ -1,10 +1,23 @@
 _Based on Atlassian [how-to](https://www.atlassian.com/git/tutorials/dotfiles)_
 
+# Dotfiles (Bare Repo Setup)
+
+This repository uses **separate branches** for different OS environments:
+
+- `master`: Linux
+- `windows`: Windows
+
 ## Before cloning to a new system
 
-```shell
-alias dtf='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-echo ".dotfiles" >> .gitignore
+```powershell
+function dtf {
+    git --git-dir=$HOME\.dotfiles --work-tree=$HOME @args
+}
+
+echo ".dotfiles" >> $HOME\.gitignore
+git clone --bare --branch windows git@github.com:marinazzio/dotfiles.git $HOME\.dotfiles
+dtf checkout windows
+dtf config --local status.showUntrackedFiles no
 ```
 
 ## Cloning
