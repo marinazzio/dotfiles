@@ -99,13 +99,8 @@ source $ZSH/oh-my-zsh.sh
 #
 alias be='bundle exec'
 alias ber='bundle exec rails'
+alias ttt='bundle exec rspec'
 alias reset_db='ber db:drop RAILS_ENV=test && ber db:create RAILS_ENV=test && ber db:migrate RAILS_ENV=test'
 alias dtf='/usr/bin/git --git-dir=/home/marinad/.dotfiles/ --work-tree=/home/marinad'
 
-export PATH="$HOME/.jenv/bin:$HOME/.maven/bin:$PATH"
-eval "$(jenv init -)"
-export PYENV_ROOT="$HOME/.pyenv"
-[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
-eval "$(pyenv init -)"
-export PATH=$(python -m site --user-base)/bin:$PATH
 eval "$(mise activate zsh)"
